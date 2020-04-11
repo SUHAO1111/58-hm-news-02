@@ -19,6 +19,10 @@
       ref="password"
     ></hm-input>
     <hm-button @click="login">登录</hm-button>
+    <div class="go-register">
+      没有账号去
+      <router-link to="/register">注册</router-link>
+    </div>
   </div>
 </template>
 <script>
@@ -29,6 +33,10 @@ export default {
       username: '',
       password: ''
     }
+  },
+  created() {
+    this.username = this.$route.params.username
+    this.password = this.$route.params.password
   },
   methods: {
     login() {
@@ -59,4 +67,12 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.go-register {
+  text-align: right;
+  padding-right: 20px;
+  font-size: 18px;
+  a {
+    color: yellow;
+  }
+}
 </style>
