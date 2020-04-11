@@ -1,5 +1,5 @@
 <template>
-  <div>我是跟组件</div>
+  <router-view></router-view>
 </template>
 <script>
 export default {};
